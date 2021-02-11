@@ -11,6 +11,21 @@
     HINT: lookup .val()
     */
     $(function () {
+      const $clearText = $('#clear-button');
+      const $saveText = $('#save-button');
+      const $text = $('#text-field');
+      const $message = $('#log');
+
+      $clearText.click (() => {
+        $text.val("")
+        })
+        
+      $saveText.click (() => {
+        $li = $("<li>", {
+          text: $text.val()
+        })
+        $message.append($li);
+      })
       // write your code here
     });
     </script>
